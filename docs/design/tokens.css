@@ -1,9 +1,23 @@
-@import "tailwindcss";
+/**
+ * Design tokens — coffee-project
+ *
+ * Drop-in for app/globals.css. Merge the `:root` values into the existing
+ * `:root` block and the `@theme inline` values into the existing
+ * `@theme inline` block (don't nest a second @import "tailwindcss").
+ *
+ * Integration step that isn't optional: --font-display below points at
+ * "Unbounded", which isn't loaded yet. Add it the same way Geist is loaded
+ * in app/layout.tsx:
+ *
+ *   import { Unbounded } from "next/font/google";
+ *   const unbounded = Unbounded({ variable: "--font-unbounded", weight: ["600","700","800"], subsets: ["latin"] });
+ *   // then spread `unbounded.variable` into the <html className> alongside geistSans/geistMono
+ *
+ * and change the line below to `--font-display: var(--font-unbounded);`.
+ * Until that's wired up, --font-display silently falls back to --font-sans.
+ */
 
 :root {
-  --background: var(--cream-100);
-  --foreground: var(--espresso-900);
-
   /* surfaces */
   --cream-50: #fbf4ec;   /* paper — cards, raised surfaces on cream */
   --cream-100: #f6e8d6;  /* page background */
@@ -26,12 +40,6 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-display: var(--font-unbounded);
-
   --color-paper: var(--cream-50);
   --color-cream: var(--cream-100);
   --color-cream-deep: var(--cream-200);
@@ -47,6 +55,9 @@
   --color-accent-pine: var(--accent-pine);
   --color-accent-rose: var(--accent-rose);
   --color-accent-amber: var(--accent-amber);
+
+  /* falls back to --font-sans (Geist) until Unbounded is wired up — see header note */
+  --font-display: var(--font-unbounded, var(--font-sans));
 }
 
 @theme {
@@ -73,18 +84,4 @@
   --text-display-md: 1.75rem;
   --text-display-md--line-height: 1.15;
   --text-display-md--letter-spacing: -0.01em;
-
-  /* signature — steam mark ambient loop, see docs/design/components.md */
-  --animate-steam: steam 3.5s var(--ease-brew) infinite;
-}
-
-@keyframes steam {
-  0%, 100% { opacity: 0.4; transform: translateY(0); }
-  50% { opacity: 1; transform: translateY(-4px); }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
 }

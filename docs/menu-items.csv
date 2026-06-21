@@ -1,0 +1,21 @@
+name,category,description,price,badge
+Espresso,Espresso,"A double shot, pulled fresh for each order.",3.25,
+Doppio,Espresso,"Two shots, for the mornings that need it.",3.50,
+Macchiato,Espresso,"A shot marked with a spoon of foam.",3.50,
+Americano,Espresso,"Espresso, lengthened with hot water.",3.75,
+Cortado,Espresso Drinks,"Equal parts espresso and steamed milk, no foam.",4.00,
+Cappuccino,Espresso Drinks,"Espresso, steamed milk, and a thick cap of foam.",4.25,
+Latte,Espresso Drinks,"Espresso and steamed milk, finished with light foam.",4.50,Popular
+Flat White,Espresso Drinks,"Double espresso with velvety microfoam, no big bubbles.",4.75,
+Maple Cortado,Espresso Drinks,"Our cortado with a thread of real maple syrup.",4.75,House favorite
+Brown Sugar Oat Latte,Espresso Drinks,"Latte made with oat milk and brown sugar syrup.",5.25,Popular
+Butter Croissant,Pastries,"Laminated in-house, baked fresh each morning.",3.75,
+Almond Croissant,Pastries,"Day-old croissants filled with almond cream, baked again.",4.50,House favorite
+Cardamom Bun,Pastries,"A soft swirl bun spiced with cardamom and brown sugar.",4.25,Popular
+Blueberry Scone,Pastries,"A craggy scone studded with blueberries, glazed on top.",3.95,
+Egg & Cheddar on Brioche,Sandwiches,"Soft-scrambled egg and aged cheddar, toasted brioche.",7.50,
+Turkey & Swiss,Sandwiches,"Roast turkey, swiss, and whole-grain mustard on sourdough.",9.50,
+Caprese,Sandwiches,"Fresh mozzarella, tomato, and basil pesto on ciabatta.",8.75,Popular
+Iced Coffee,Cold Drinks,"Slow-steeped overnight and poured over ice.",3.95,
+Cardamom Cold Brew,Cold Drinks,"Cold brew steeped with whole cardamom pods.",4.95,House favorite
+Iced Matcha Latte,Cold Drinks,"Stone-ground matcha, shaken cold, poured over ice.",5.25,Popular
