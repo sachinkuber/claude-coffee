@@ -30,7 +30,7 @@ export default function AboutPage() {
 
         <div className="relative aspect-[4/3] overflow-hidden rounded-card bg-cream-deep shadow-soft">
           <Image
-            src="/images/about-founders.jpg"
+            src="/images/about-founders.webp"
             alt=""
             fill
             sizes="(min-width: 768px) 768px, 100vw"

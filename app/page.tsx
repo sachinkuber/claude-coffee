@@ -20,7 +20,7 @@ export default async function Home() {
 
       <div className="relative isolate overflow-hidden">
         <Image
-          src="/images/hero-bar.jpg"
+          src="/images/hero-bar.webp"
           alt=""
           fill
           priority
